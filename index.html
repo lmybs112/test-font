@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>GenYoGothic2TW 字體展示</title>
+  <style>
+    /* Regular 字重 (400) */
+    @font-face {
+      font-family: 'GenYoGothic2TW';
+      src: url('https://cdn.jsdelivr.net/gh/lmybs112/test-font/fonts-origin/GenYoGothic2TW-R.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    
+    /* Bold 字重 (700) */
+    @font-face {
+      font-family: 'GenYoGothic2TW';
+      src: url('https://cdn.jsdelivr.net/gh/lmybs112/test-font/fonts-origin/GenYoGothic2TW-B.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    body {
+      font-family: 'GenYoGothic2TW', system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin: 2rem 0 1rem;
+      font-weight: 700;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 0.5rem;
+    }
+
+    .font-sample {
+      margin-bottom: 2rem;
+      background-color: #f9f9f9;
+      padding: 1.5rem;
+      border-radius: 6px;
+    }
+
+    .sample-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .weight-sample {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .weight-label {
+      display: block;
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 0.5rem;
+    }
+
+    .text-sample {
+      font-size: 1.5rem;
+      margin-top: 0.5rem;
+      padding: 1rem;
+      background-color: white;
+      border-radius: 4px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .regular {
+      font-weight: 400;
+    }
+
+    .bold {
+      font-weight: 700;
+    }
+    
+    .comparison {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1rem;
+      align-items: center;
+    }
+    
+    .comparison label {
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>GenYoGothic2TW 字體展示</h1>
+  
+  <p>這個頁面展示了 GenYoGothic2TW 字體的 Regular (400) 和 Bold (700) 兩種字重。</p>
+  
+  <h2>系統字體對比（本機字體）</h2>
+  
+  <div class="font-sample">
+    <p style="margin-bottom: 0.5rem; color: #666;">此區塊使用系統預設字體，用於對比自定義字體是否正確載入</p>
+    <div class="sample-container">
+      <div class="weight-sample">
+        <span class="weight-label">系統字體 Regular (400)</span>
+        <div class="text-sample" style="font-family: system-ui, -apple-system, sans-serif; font-weight: 400;">
+          徵新測試。漢字測試。
+          <br>The quick brown fox jumps over the lazy dog.
+        </div>
+      </div>
+      
+      <div class="weight-sample">
+        <span class="weight-label">系統字體 Bold (700)</span>
+        <div class="text-sample" style="font-family: system-ui, -apple-system, sans-serif; font-weight: 700;">
+          徵新測試。漢字測試。
+          <br>The quick brown fox jumps over the lazy dog.
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <h2>字重對比</h2>
+  
+  <div class="font-sample">
+    <div class="sample-container">
+      <div class="weight-sample">
+        <span class="weight-label">Regular (400)</span>
+        <div class="text-sample regular">徵新測試。漢字測試。<br>The quick brown fox jumps over the lazy dog.</div>
+      </div>
+      
+      <div class="weight-sample">
+        <span class="weight-label">Bold (700)</span>
+        <div class="text-sample bold">徵新測試。漢字測試。<br>The quick brown fox jumps over the lazy dog.</div>
+      </div>
+    </div>
+  </div>
+  
+  <h2>句子示例</h2>
+  
+  <div class="font-sample">
+    <div class="sample-container">
+      <div class="weight-sample">
+        <span class="weight-label">Regular (400)</span>
+        <div class="text-sample regular">
+          他們所有的人都站在藍天之下，手裡拿著彩色的氣球。
+          The quick brown fox jumps over the lazy dog.
+        </div>
+      </div>
+      
+      <div class="weight-sample">
+        <span class="weight-label">Bold (700)</span>
+        <div class="text-sample bold">
+          他們所有的人都站在藍天之下，手裡拿著彩色的氣球。
+          The quick brown fox jumps over the lazy dog.
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <h2>混合字重示例</h2>
+  
+  <div class="font-sample">
+    <p style="font-weight: 400;">正常文本使用 <span class="regular">Regular 字重</span>，而<span class="bold">重點內容使用 Bold 字重</span>，這樣可以形成良好的對比。</p>
+    
+    <p class="regular">這是一段普通文本，使用 Regular 字重。當需要<span class="bold">強調某些內容</span>時，可以使用 Bold 字重來突出顯示。</p>
+  </div>
+  
+  <h2>數字和符號</h2>
+  
+  <div class="font-sample">
+    <div class="comparison">
+      <label>Regular (400):</label>
+      <div class="regular">0123456789 !@#$%^&*()_+-=[]{}|;':",./<>?</div>
+      
+      <label>Bold (700):</label>
+      <div class="bold">0123456789 !@#$%^&*()_+-=[]{}|;':",./<>?</div>
+    </div>
+  </div>
+  
+  <p style="margin-top: 2rem; color: #666; text-align: center;">
+    字體文件來源：<a href="https://github.com/ButTaiwan/genyog-font" target="_blank">genyog-font</a> | 遵循 SIL Open Font License 1.1
+  </p>
+
+</body>
+</html> 
